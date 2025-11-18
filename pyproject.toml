@@ -1,12 +1,13 @@
 [project]
-name = "mediapipe"
+name = "mediapipe-streamlit-app"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "numpy>=2.3.5",
+    "numpy<2",                   # instead of numpy>=2.3.5
     "opencv-python>=4.11.0.86",
-    "protobuf>=6.33.1",
+    "protobuf>=4.25.3,<5",       # as discussed before
     "streamlit>=1.51.0",
+    "mediapipe>=0.10.20",
 ]
