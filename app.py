@@ -19,10 +19,10 @@ if 'run_detection' not in st.session_state:
 # Control buttons
 col_btn1, col_btn2, col_btn3 = st.columns([1, 1, 4])
 with col_btn1:
-    if st.button("▶️ Start", use_container_width=True):
+    if st.button("▶️ Start", width="stretch"):
         st.session_state.run_detection = True
 with col_btn2:
-    if st.button("⏹️ Stop", use_container_width=True):
+    if st.button("⏹️ Stop", width="stretch"):
         st.session_state.run_detection = False
 
 st.divider()
@@ -101,8 +101,8 @@ with mp_pose.Pose(
                 )
         
         # Display frames
-        frame_placeholder1.image(image, channels="RGB", use_container_width=True)
-        frame_placeholder2.image(image_with_landmarks, channels="RGB", use_container_width=True)
+        frame_placeholder1.image(image, channels="RGB", width="stretch")
+        frame_placeholder2.image(image_with_landmarks, channels="RGB", width="stretch")
         
         # Update FPS
         fps_placeholder.metric("FPS", f"{fps:.2f}")
